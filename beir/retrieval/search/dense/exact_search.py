@@ -38,6 +38,10 @@ class DenseRetrievalExactSearch:
         queries = [queries[qid] for qid in queries]
         query_embeddings = self.model.encode_queries(
             queries, batch_size=self.batch_size, show_progress_bar=self.show_progress_bar, convert_to_tensor=self.convert_to_tensor)
+        
+        print(type(query_embeddings))
+        print(query_embeddings)) 
+        
           
         logger.info("Sorting Corpus by document length (Longest first)...")
 
@@ -60,6 +64,8 @@ class DenseRetrievalExactSearch:
                 show_progress_bar=self.show_progress_bar, 
                 convert_to_tensor = self.convert_to_tensor
                 )
+            
+            print(type(sub_corpus_embeddings))
 
             #Compute similarites using either cosine-similarity or dot product
             cos_scores = self.score_functions[score_function](query_embeddings, sub_corpus_embeddings)
