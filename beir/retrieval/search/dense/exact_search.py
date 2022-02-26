@@ -32,7 +32,7 @@ class DenseRetrievalExactSearch:
         if score_function not in self.score_functions:
             raise ValueError("score function: {} must be either (cos_sim) for cosine similarity or (dot) for dot product".format(score_function))
             
-        logger.info("Encoding Queries...")
+        logger.info("Encoding Queries Hi Hi Hi...")
         query_ids = list(queries.keys())
         self.results = {qid: {} for qid in query_ids}
         queries = [queries[qid] for qid in queries]
