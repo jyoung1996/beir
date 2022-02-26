@@ -40,7 +40,7 @@ class DenseRetrievalExactSearch:
             queries, batch_size=self.batch_size, show_progress_bar=self.show_progress_bar, convert_to_tensor=self.convert_to_tensor)
         
         print(type(query_embeddings))
-        print(query_embeddings)) 
+        print(query_embeddings)
         
           
         logger.info("Sorting Corpus by document length (Longest first)...")
